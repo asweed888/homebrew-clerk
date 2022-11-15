@@ -5,11 +5,11 @@
 class Clerk < Formula
   desc "Declarative development framework clerk"
   homepage "https://github.com/asweed888/clerk"
-  version "0.2.6"
+  version "0.2.7-beta"
 
   on_macos do
-    url "https://github.com/asweed888/clerk/releases/download/v0.2.6/clerk_darwin_all.tar.gz"
-    sha256 "837d8f9f9328ef7a87591949ee6820388b10feddafc4abf8ad7d9d27dc368bd3"
+    url "https://github.com/asweed888/clerk/releases/download/v0.2.7-beta/clerk_darwin_all.tar.gz"
+    sha256 "2eba18d940a110160280a60d9cba771f1e6944c25904361e1559d120bf4c5cf9"
 
     def install
       bin.install "clerk"
@@ -18,24 +18,24 @@ class Clerk < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.2.6/clerk_linux_armv6.tar.gz"
-      sha256 "fdde28baff7cc1b72246befe5ca091f6284dc52c0c5a2f0465651b97e16150e7"
+      url "https://github.com/asweed888/clerk/releases/download/v0.2.7-beta/clerk_linux_armv6.tar.gz"
+      sha256 "52d0c3b2613839bcde5fc3b1fba7ac01659e8faf492f93473d3cf71840abe317"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/asweed888/clerk/releases/download/v0.2.6/clerk_linux_x86_64.tar.gz"
-      sha256 "3ae54bd3e6a808b6fe865710309d5a4656ad990acdd07ee4cc35b9a6560fa71d"
+      url "https://github.com/asweed888/clerk/releases/download/v0.2.7-beta/clerk_linux_x86_64.tar.gz"
+      sha256 "675de83d8553da8954be886ae1bcb3d1b989a59cf1b00ad0f87f38367175c685"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.2.6/clerk_linux_arm64.tar.gz"
-      sha256 "825215f3bcc4d6f32e526202a3d73fbc220eb0e612c36d272099073d3c44341c"
+      url "https://github.com/asweed888/clerk/releases/download/v0.2.7-beta/clerk_linux_arm64.tar.gz"
+      sha256 "2fb4d015188fcd6a6e7c42de727125709382152c07767a9122b5eab701389057"
 
       def install
         bin.install "clerk"
