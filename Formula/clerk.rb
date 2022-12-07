@@ -5,11 +5,11 @@
 class Clerk < Formula
   desc "Declarative development framework clerk"
   homepage "https://github.com/asweed888/clerk"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
-    url "https://github.com/asweed888/clerk/releases/download/v0.4.1/clerk_darwin_all.tar.gz"
-    sha256 "b2f3c218b7541a7c74880b348f1e1e27f35e1ea0597ea82b581d99bac7d880e2"
+    url "https://github.com/asweed888/clerk/releases/download/v0.4.2/clerk_darwin_all.tar.gz"
+    sha256 "72f61cec3384d8f314379bd9672a25fbe6f597bbe67b9e0f94134806bfe35826"
 
     def install
       bin.install "clerk"
@@ -18,24 +18,24 @@ class Clerk < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.1/clerk_linux_x86_64.tar.gz"
-      sha256 "e9a12d387a4f896480b64953d2919c98129693b8de0d4fbe910a15a77b3e22fe"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.2/clerk_linux_x86_64.tar.gz"
+      sha256 "7a85a9561c2b18e8d47185d186b346cd7675a288ad49a4f0127b7e232d05e4f1"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.1/clerk_linux_armv6.tar.gz"
-      sha256 "c830d8e6320fff3e5cadc4914d996366cf38dcc7cb8f6540b992afebc6c95a38"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.2/clerk_linux_armv6.tar.gz"
+      sha256 "1af14f11799c2dbc71b9292543c5d47c38c9072764678c30dbe996c33049fbcb"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.1/clerk_linux_arm64.tar.gz"
-      sha256 "734f4ebd951372ca21092558c074f0d98370804bb835ad5f54040ecb06c2e056"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.2/clerk_linux_arm64.tar.gz"
+      sha256 "0f6698aab676f94b086f7815c5b70fb4c8ef9cad3c9eae0a13bc6234c77171d5"
 
       def install
         bin.install "clerk"
