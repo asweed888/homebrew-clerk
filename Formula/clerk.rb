@@ -5,11 +5,11 @@
 class Clerk < Formula
   desc "Declarative development framework clerk"
   homepage "https://github.com/asweed888/clerk"
-  version "0.4.2"
+  version "0.4.3"
 
   on_macos do
-    url "https://github.com/asweed888/clerk/releases/download/v0.4.2/clerk_darwin_all.tar.gz"
-    sha256 "72f61cec3384d8f314379bd9672a25fbe6f597bbe67b9e0f94134806bfe35826"
+    url "https://github.com/asweed888/clerk/releases/download/v0.4.3/clerk_darwin_all.tar.gz"
+    sha256 "f4d158dbd786e798419a095cfc95be420b2c28aa53f2777591739541151ee993"
 
     def install
       bin.install "clerk"
@@ -17,25 +17,25 @@ class Clerk < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.3/clerk_linux_arm64.tar.gz"
+      sha256 "9f4166a95bb97c978650f7a673b2cf952a92f0f0b0c4b97ca3a58db8eef9c36d"
+
+      def install
+        bin.install "clerk"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.2/clerk_linux_x86_64.tar.gz"
-      sha256 "7a85a9561c2b18e8d47185d186b346cd7675a288ad49a4f0127b7e232d05e4f1"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.3/clerk_linux_x86_64.tar.gz"
+      sha256 "25539885b7782eaeed32ba09e14ada8bea9e9542ee1cf0c4ceefd42f03108a06"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.2/clerk_linux_armv6.tar.gz"
-      sha256 "1af14f11799c2dbc71b9292543c5d47c38c9072764678c30dbe996c33049fbcb"
-
-      def install
-        bin.install "clerk"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.2/clerk_linux_arm64.tar.gz"
-      sha256 "0f6698aab676f94b086f7815c5b70fb4c8ef9cad3c9eae0a13bc6234c77171d5"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.3/clerk_linux_armv6.tar.gz"
+      sha256 "44165dcdf809c150a736cf82c3b5b7dcf5412496338316fb8c7e44c3837357cb"
 
       def install
         bin.install "clerk"
