@@ -5,11 +5,11 @@
 class Clerk < Formula
   desc "Declarative development framework clerk"
   homepage "https://github.com/asweed888/clerk"
-  version "0.4.11"
+  version "0.4.12"
 
   on_macos do
-    url "https://github.com/asweed888/clerk/releases/download/v0.4.11/clerk_darwin_all.tar.gz"
-    sha256 "03bb0ee91e538338a6520e41fac1975eaaa671086ac7dcf1f9f4a57e77c10209"
+    url "https://github.com/asweed888/clerk/releases/download/v0.4.12/clerk_darwin_all.tar.gz"
+    sha256 "82c9493cae9e8e87541fcd848cf5c137bd2a1f2baf56fa27c3fcd266f6d9b6fa"
 
     def install
       bin.install "clerk"
@@ -18,24 +18,24 @@ class Clerk < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.11/clerk_linux_armv6.tar.gz"
-      sha256 "7fda08ba9a8bdca542180d148307de20552a7612c2ffef6d0f663357f3d60293"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.12/clerk_linux_armv6.tar.gz"
+      sha256 "5426e1a2998130c8d65f75ddb5f7a0439acecb779c78386617bd8ed34be5f4da"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.11/clerk_linux_x86_64.tar.gz"
-      sha256 "1da9e291a75e9b04c3c294d6b4de523e566277c6e3cf7ddebcdd83ab37dad8c9"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.12/clerk_linux_x86_64.tar.gz"
+      sha256 "8b3a27a639414c2f50704dec1a1f04dffe1107524b23ab6c41bd0a8a10086928"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.11/clerk_linux_arm64.tar.gz"
-      sha256 "dbf192269dcf6f1a48a515356917875ca1c890420f85b395d481edfa4d4dd15b"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.12/clerk_linux_arm64.tar.gz"
+      sha256 "80465d8b04cc5d164c51bea618c13c39c54093bd8cf9944cf7cb4ec4349be64d"
 
       def install
         bin.install "clerk"
