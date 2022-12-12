@@ -5,11 +5,11 @@
 class Clerk < Formula
   desc "Declarative development framework clerk"
   homepage "https://github.com/asweed888/clerk"
-  version "0.4.10"
+  version "0.4.11"
 
   on_macos do
-    url "https://github.com/asweed888/clerk/releases/download/v0.4.10/clerk_darwin_all.tar.gz"
-    sha256 "dec36312bdd72963b2127cad31403e08322d393f0342c37de3d471f2dbae3834"
+    url "https://github.com/asweed888/clerk/releases/download/v0.4.11/clerk_darwin_all.tar.gz"
+    sha256 "03bb0ee91e538338a6520e41fac1975eaaa671086ac7dcf1f9f4a57e77c10209"
 
     def install
       bin.install "clerk"
@@ -17,25 +17,25 @@ class Clerk < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.11/clerk_linux_armv6.tar.gz"
+      sha256 "7fda08ba9a8bdca542180d148307de20552a7612c2ffef6d0f663357f3d60293"
+
+      def install
+        bin.install "clerk"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.10/clerk_linux_x86_64.tar.gz"
-      sha256 "f63a05864607ca61ce27cbf206f6059aa6394b2867f27b5e29580bc17edb9208"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.11/clerk_linux_x86_64.tar.gz"
+      sha256 "1da9e291a75e9b04c3c294d6b4de523e566277c6e3cf7ddebcdd83ab37dad8c9"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.10/clerk_linux_arm64.tar.gz"
-      sha256 "c61fb15f3fe418f996998d1ef85720ca56a410613d33460128f62c23afa41b4f"
-
-      def install
-        bin.install "clerk"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.10/clerk_linux_armv6.tar.gz"
-      sha256 "40835551dd413c51f6427c2bdd7dfa5220ac43db36305d1323fd5fc230c07f70"
+      url "https://github.com/asweed888/clerk/releases/download/v0.4.11/clerk_linux_arm64.tar.gz"
+      sha256 "dbf192269dcf6f1a48a515356917875ca1c890420f85b395d481edfa4d4dd15b"
 
       def install
         bin.install "clerk"
