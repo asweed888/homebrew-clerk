@@ -5,11 +5,11 @@
 class Clerk < Formula
   desc "Declarative development framework clerk"
   homepage "https://github.com/asweed888/clerk"
-  version "0.4.12"
+  version "0.5.0"
 
   on_macos do
-    url "https://github.com/asweed888/clerk/releases/download/v0.4.12/clerk_darwin_all.tar.gz"
-    sha256 "82c9493cae9e8e87541fcd848cf5c137bd2a1f2baf56fa27c3fcd266f6d9b6fa"
+    url "https://github.com/asweed888/clerk/releases/download/v0.5.0/clerk_darwin_all.tar.gz"
+    sha256 "36b8ab71cbbc232ed92e77d451fa01b940ab6afaf6389990623ce0cabdce986b"
 
     def install
       bin.install "clerk"
@@ -18,24 +18,24 @@ class Clerk < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.12/clerk_linux_armv6.tar.gz"
-      sha256 "5426e1a2998130c8d65f75ddb5f7a0439acecb779c78386617bd8ed34be5f4da"
+      url "https://github.com/asweed888/clerk/releases/download/v0.5.0/clerk_linux_armv6.tar.gz"
+      sha256 "f0a19840e4d6d9ec337582ca37606cc974df55c7868025a1d1dc31f6a47ab8af"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.12/clerk_linux_x86_64.tar.gz"
-      sha256 "8b3a27a639414c2f50704dec1a1f04dffe1107524b23ab6c41bd0a8a10086928"
+      url "https://github.com/asweed888/clerk/releases/download/v0.5.0/clerk_linux_x86_64.tar.gz"
+      sha256 "bcd04a778928c7f4fe11a86765a6c79bfaa8f992850a884a6ef5f4b031c0597d"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.4.12/clerk_linux_arm64.tar.gz"
-      sha256 "80465d8b04cc5d164c51bea618c13c39c54093bd8cf9944cf7cb4ec4349be64d"
+      url "https://github.com/asweed888/clerk/releases/download/v0.5.0/clerk_linux_arm64.tar.gz"
+      sha256 "17508a4c5000bad3b4109e9864d97e46b85f6edb6535645794b51c3fd5e2a576"
 
       def install
         bin.install "clerk"
