@@ -5,11 +5,11 @@
 class Clerk < Formula
   desc "Declarative development framework clerk"
   homepage "https://github.com/asweed888/clerk"
-  version "0.5.3"
+  version "0.5.4"
 
   on_macos do
-    url "https://github.com/asweed888/clerk/releases/download/v0.5.3/clerk_darwin_all.tar.gz"
-    sha256 "7a93e0d0ca652ff57e7bc32f93647cd8b28ff22670409d68d6edb66d0260c48e"
+    url "https://github.com/asweed888/clerk/releases/download/v0.5.4/clerk_darwin_all.tar.gz"
+    sha256 "0126003f38533dfeeaa8b951dee5084f86fd56be72e677a1497bdfc0707173db"
 
     def install
       bin.install "clerk"
@@ -17,25 +17,25 @@ class Clerk < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/asweed888/clerk/releases/download/v0.5.3/clerk_linux_x86_64.tar.gz"
-      sha256 "39b515afe6474d3757e666f5ae480ab4bd7fd0c38ee82eb0b6279307e7f6e17e"
-
-      def install
-        bin.install "clerk"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.5.3/clerk_linux_arm64.tar.gz"
-      sha256 "3bf697738bd42197589d5c82977fea86867cfd51ad497aee6617d3b67b2cdd3d"
+      url "https://github.com/asweed888/clerk/releases/download/v0.5.4/clerk_linux_arm64.tar.gz"
+      sha256 "8f7a2c7b845628ea59de9868476d01b50c13013ebd59db43775f6b5e7a04d8a7"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.5.3/clerk_linux_armv6.tar.gz"
-      sha256 "a9d8e10ab982d5a970d803a51a32217822a318e9646cd4d95bc850cc832bd425"
+      url "https://github.com/asweed888/clerk/releases/download/v0.5.4/clerk_linux_armv6.tar.gz"
+      sha256 "845ce7bc60833db55337506bfe1dccd08dbc6d9399c3528af6cfcfb371a79fe2"
+
+      def install
+        bin.install "clerk"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/asweed888/clerk/releases/download/v0.5.4/clerk_linux_x86_64.tar.gz"
+      sha256 "a4a033656ae4f7429d3bc9674f47d05dd2b9e0ee8892ab893170bc53861a8545"
 
       def install
         bin.install "clerk"
