@@ -5,11 +5,11 @@
 class Clerk < Formula
   desc "Declarative development framework clerk"
   homepage "https://github.com/asweed888/clerk"
-  version "0.6.1"
+  version "0.6.2"
 
   on_macos do
-    url "https://github.com/asweed888/clerk/releases/download/v0.6.1/clerk_darwin_all.tar.gz"
-    sha256 "10b6be5e54dfb4035fe08ae177c45253111ee9545a75de2d18e41d3629f61adc"
+    url "https://github.com/asweed888/clerk/releases/download/v0.6.2/clerk_darwin_all.tar.gz"
+    sha256 "ed0f750b02c5913850bde43ab43823fd5dee4dd5e1942ca4cb8ab0c2c602525f"
 
     def install
       bin.install "clerk"
@@ -18,24 +18,24 @@ class Clerk < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/asweed888/clerk/releases/download/v0.6.1/clerk_linux_x86_64.tar.gz"
-      sha256 "c1d3c27b57ba1df12e9dc0be10ae01dd411db726c6e76faa4dc57994b030ed63"
-
-      def install
-        bin.install "clerk"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.6.1/clerk_linux_arm64.tar.gz"
-      sha256 "83e0134d05fb1c8bf219b7c74c0a03fdd5d725c5b495eb4214978095814ca123"
+      url "https://github.com/asweed888/clerk/releases/download/v0.6.2/clerk_linux_x86_64.tar.gz"
+      sha256 "6d2307d7bea7d1b5f7cde5d07ab96c5c55f20e1822cfe7de502a723458c50e2a"
 
       def install
         bin.install "clerk"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/asweed888/clerk/releases/download/v0.6.1/clerk_linux_armv6.tar.gz"
-      sha256 "dbbc4c8fba35c226aabf849e19cff7d5ca87473f6f0745fb4fb58e08dfe926ae"
+      url "https://github.com/asweed888/clerk/releases/download/v0.6.2/clerk_linux_armv6.tar.gz"
+      sha256 "3da16e470df752734b3fdd66aaf8ceb78128505de52f3f6a7058ad383da24de4"
+
+      def install
+        bin.install "clerk"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/asweed888/clerk/releases/download/v0.6.2/clerk_linux_arm64.tar.gz"
+      sha256 "fdcf95488e5a98f1ffc3a4ae399197e19095cf51f969c0be092f07bc24ee0ee4"
 
       def install
         bin.install "clerk"
